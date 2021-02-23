@@ -1,5 +1,11 @@
 .App {
 }
+.story{
+  display: flex;
+}
+span{
+  padding-right: 5px;
+}
 .votearrow {
   width: 10px;
   height: 10px;
