@@ -13,15 +13,15 @@ const ListStories = ({ type }) => {
           (story && story.by.toLowerCase().includes(searchTerm))
       )
     : [];
-  return isLoading ? (
-    <p>Loading...</p>
-  ) : (
+  return (
     <Fragment>
       <ListHeader
         onChangeText={(e) => setSearchTerm(e.target.value)}
         selectedType={type}
       />
-      {filteredStories.length ? (
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : filteredStories.length ? (
         filteredStories.map(({ data: story }, index) => (
           <Story key={story.id} story={{ ...story, index, searchTerm }} />
         ))
