@@ -6,7 +6,7 @@ import ListStories from "./components/ListStories";
 import "./App.css";
 
 const App = () => {
-  console.log("Geeky ==>")
+  console.log("Geeky ==> for development")
   return (
     <div className="App">
       <Header />
